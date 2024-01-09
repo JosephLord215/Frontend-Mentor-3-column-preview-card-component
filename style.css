@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+	--orange: hsl(31, 77%, 52%);
+	--light-cyan: hsl(184, 100%, 22%);
+	--dark-cyan: hsl(179, 100%, 13%);
+	--transparent-white: hsla(0, 0%, 100%, 0.75);
+	--light-gray: hsl(0, 0%, 95%);
+	--bold-font: 'Big Shoulders Display', sans-serif;
+	--regular-font: 'Lexend Deca', sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+}
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+.container {
+	display: flex;
+	flex-direction: row;
+	width: 920px;
+	height: 500px;
+}
+
+.column {
+	flex: 1;
+	--_background-color: var(--bg-color, black);
+	--_icon: var(--icon, black);
+	background-color: var(--_background-color);
+	color: var(--transparent-white);
+	/* padding: 50px; */
+}
+.icon {
+	background-color: var(--_icon);
+	padding: 2rem 0 0 2rem;
+}
+.text-section {
+	font-family: var(--regular-font);
+}
+.title {
+	font-size: 2.5rem;
+	font-family: var(--bold-font);
+	font-weight: 700;
+	padding: 2rem;
+	text-transform: uppercase;
+	color: var(--light-gray);
+}
+.text-section {
+	padding: 1rem 2rem 5.5rem 2rem;
+}
+.button {
+	border-radius: 25px;
+	appearance: none;
+	background-color: var(--light-gray);
+	padding: 1rem;
+	text-align: center;
+	margin: 20px;
+	width: 50%;
+}
+
+.col-sedan {
+	--bg-color: var(--orange);
+	--icon: var(--orange);
+}
+.col-sedan button {
+	border: var(--orange);
+	color: var(--orange);
+}
+.col-sedan button:hover {
+	cursor: pointer;
+	border: 2px var(--light-gray) solid;
+	background-color: var(--orange);
+	color: var(--light-gray);
+}
+
+.col-suv {
+	--bg-color: var(--light-cyan);
+	--icon: var(--light-cyan);
+}
+.col-suv button {
+	border: var(--light-cyan);
+	color: var(--light-cyan);
+}
+.col-suv button:hover {
+	cursor: pointer;
+	border: 2px var(--light-gray) solid;
+	background-color: var(--light-cyan);
+	color: var(--light-gray);
+}
+
+.col-luxury {
+	--bg-color: var(--dark-cyan);
+	--icon: var(--dark-cyan);
+}
+.col-luxury button {
+	border: var(--dark-cyan);
+	color: var(--dark-cyan);
+}
+.col-luxury button:hover {
+	cursor: pointer;
+	border: 2px var(--light-gray) solid;
+	background-color: var(--dark-cyan);
+	color: var(--light-gray);
+}
+
+@media screen and (max-width: 375px) {
+	.container {
+		flex-direction: column;
+	}
+}
