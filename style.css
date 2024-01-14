@@ -36,7 +36,6 @@
 	--_icon: var(--icon, black);
 	background-color: var(--_background-color);
 	color: var(--transparent-white);
-	/* padding: 50px; */
 }
 .icon {
 	background-color: var(--_icon);
