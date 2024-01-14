@@ -26,6 +26,8 @@
 	flex-direction: row;
 	width: 920px;
 	height: 500px;
+	overflow: hidden;
+	border-radius: 8px;
 }
 
 .column {
@@ -110,7 +112,19 @@
 }
 
 @media screen and (max-width: 375px) {
+	.wrapper {
+		display: flex;
+		width: 375px;
+		height: 1502px;
+		padding: 88px 24px;
+		justify-content: center;
+		align-items: center;
+	}
+
 	.container {
 		flex-direction: column;
+		width: 327px;
+		height: auto;
+		margin-top: 20px;
 	}
 }
